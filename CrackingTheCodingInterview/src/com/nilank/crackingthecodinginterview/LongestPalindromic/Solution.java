@@ -19,6 +19,7 @@ public class Solution {
     }
     
     private void extendPalindrome(String s, int j, int k){
+        System.out.println(s + "--------------- " + j + " ------------------------- " + k);
         while(j >= 0 && k < s.length() && s.charAt(j) == s.charAt(k)){
             j--;
             k++;
