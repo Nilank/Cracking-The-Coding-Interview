@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.nilank.crackingthecodinginterview.FindAllDuplicatesInArray;
+package com.nilank.crackingthecodinginterview.CheckNumberInArray;
 
 /**
  *
@@ -15,10 +15,9 @@ public class Solution {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int [] arr = {4,3,2,7,8,2,3,1};
-        FindAllDuplicates duplicates = new FindAllDuplicates();
-        System.out.println(duplicates.findDuplicates(arr));
-        System.out.println("Does input has duplicates or not " + duplicates.isDuplicate(arr));
+        int[] arr = {4,3,2,7,8,2,3,1};
+        CheckNumberArray check = new CheckNumberArray();
+        System.out.println(check.isExist(arr, 7));
     }
     
 }

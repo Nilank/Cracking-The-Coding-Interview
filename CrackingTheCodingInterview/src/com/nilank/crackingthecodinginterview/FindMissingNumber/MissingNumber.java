@@ -6,6 +6,7 @@
 package com.nilank.crackingthecodinginterview.FindMissingNumber;
 
 import java.util.ArrayList;
+import java.util.BitSet;
 import java.util.List;
 
 /**
@@ -28,5 +29,40 @@ public class MissingNumber {
         }
         return res;
     }
+    
+    public static void findMissingNumberBitSet(int[] arr, int count){
+        int missingCount = count - arr.length;
+        BitSet bitset = new BitSet(count);
+        for(int number : arr){
+            bitset.set(number -1);
+        }
+        
+        System.out.printf("Missing numbers in integer array %s, with total number is %n", count);
+        int lastMissingIndex = 0;
+        for(int i=0; i<missingCount; i++){
+            lastMissingIndex = bitset.nextClearBit(lastMissingIndex);
+            System.out.println(++lastMissingIndex);
+        }
+
+    }
+    
+       /**
+    * Java method to find missing number in array of size n containing
+    * numbers from 1 to n only.
+    * can be used to find missing elements on integer array of 
+    * numbers from 1 to 100 or 1 - 1000
+    */
+    
+    public int findOneMissingNumberFromOnetoN(int[] arr, int count){
+        int expectedSum = count * ((count + 1)/2);
+        int actualSum = 0;
+        for(int num : arr){
+            actualSum += num;
+        }
+        
+        return expectedSum - actualSum;
+    }
+
+
     
 }

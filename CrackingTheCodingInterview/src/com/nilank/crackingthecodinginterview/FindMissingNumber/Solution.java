@@ -16,8 +16,11 @@ public class Solution {
      */
     public static void main(String[] args) {
        int[] arr = {4,3,2,7,8,2,3,1};
+       int count = 10;
        MissingNumber number = new MissingNumber();
-        System.out.println(number.findMissingNumber(arr));
+       number.findMissingNumberBitSet(arr, count);
+       number.findMissingNumber(arr);
+        System.out.println("missing number in array of size n containing numbers from 1 to n only " + number.findOneMissingNumberFromOnetoN(arr, count));
     }
     
 }
